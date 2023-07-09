@@ -10,7 +10,7 @@ To run this project, you need to have the following installed:
 - FastAPI
 - pymongo
 - uvicorn
-- faker (to generate fake dummy data)
+- Faker (to generate fake dummy data)
 - certifi
 - MongoDB
 
