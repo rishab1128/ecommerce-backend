@@ -1,0 +1,102 @@
+[
+    {
+        "Name": "Headphones",
+        "Price": 7939,
+        "Qty": 1
+    },
+    {
+        "Name": "Laptop",
+        "Price": 3658,
+        "Qty": 17
+    },
+    {
+        "Name": "Headphones",
+        "Price": 210,
+        "Qty": 36
+    },
+    {
+        "Name": "TV",
+        "Price": 3391,
+        "Qty": 27
+    },
+    {
+        "Name": "Mobile",
+        "Price": 6081,
+        "Qty": 29
+    },
+    {
+        "Name": "Mobile",
+        "Price": 7145,
+        "Qty": 29
+    },
+    {
+        "Name": "Smartwatch",
+        "Price": 4819,
+        "Qty": 3
+    },
+    {
+        "Name": "Tablet",
+        "Price": 3649,
+        "Qty": 83
+    },
+    {
+        "Name": "Headphones",
+        "Price": 8909,
+        "Qty": 40
+    },
+    {
+        "Name": "TV",
+        "Price": 9030,
+        "Qty": 71
+    },
+    {
+        "Name": "Headphones",
+        "Price": 7101,
+        "Qty": 30
+    },
+    {
+        "Name": "Camera",
+        "Price": 7500,
+        "Qty": 65
+    },
+    {
+        "Name": "Mobile",
+        "Price": 1059,
+        "Qty": 56
+    },
+    {
+        "Name": "TV",
+        "Price": 2848,
+        "Qty": 38
+    },
+    {
+        "Name": "Speakers",
+        "Price": 5419,
+        "Qty": 57
+    },
+    {
+        "Name": "Speakers",
+        "Price": 9817,
+        "Qty": 37
+    },
+    {
+        "Name": "Speakers",
+        "Price": 9319,
+        "Qty": 88
+    },
+    {
+        "Name": "TV",
+        "Price": 1714,
+        "Qty": 17
+    },
+    {
+        "Name": "Camera",
+        "Price": 8518,
+        "Qty": 75
+    },
+    {
+        "Name": "Camera",
+        "Price": 5878,
+        "Qty": 33
+    }
+]

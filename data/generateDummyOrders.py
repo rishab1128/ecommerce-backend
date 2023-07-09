@@ -34,7 +34,7 @@ def generate_dummy_data():
         random_items = []
         for _ in range(num_items):
             random_items.append({
-                "product_id": random.randint(1, 100),
+                "product_id": random.randint(1, 7),
                 "bought_quantity": random.randint(1, 10)
             })
 
@@ -62,7 +62,7 @@ dummy_data = generate_dummy_data()
 print(dummy_data[0])
 
 # Save to JSON file
-with open('dummy_data.json', 'w') as f:
+with open('orders.json', 'w') as f:
     json.dump(dummy_data, f, indent=4)
 
-print("Dummy data file 'dummy_data.json' has been generated.")
+print("Dummy data file 'orders.json' has been generated.")

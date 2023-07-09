@@ -1,0 +1,75 @@
+@host = http://127.0.0.1:8000
+
+#1) List all avaiable products in the system
+GET {{host}}/products
+
+###
+
+#2) Create a new order
+POST {{host}}/create_order 
+Content-Type: application/json
+
+{
+    "timestamp": "2023-07-09T02:24:31.202169",
+    "items": [
+        {
+            "product_id": 1,
+            "bought_quantity": 4
+        },
+        {
+            "product_id": 7,
+            "bought_quantity": 1
+        },
+        {
+            "product_id": 3,
+            "bought_quantity": 2
+        },
+        {
+            "product_id": 4,
+            "bought_quantity": 7
+        }
+    ],
+    "total_amount": 321.05,
+    "user_address": {
+        "city": "Udaipur",
+        "country": "India",
+        "zip_code": "18072"
+    }
+}
+
+###
+
+#3) Fetch all orders from the system (Also implement pagination using limit and offset)
+GET {{host}}/orders?limit=1&offset=20
+
+
+
+###
+
+#4) Get a specific order using order_id
+@order_id = 16
+GET {{host}}/orders/{{order_id}}
+
+
+###
+
+
+#5) Update a product (using product_id) when updating the available quantity for the product
+@product_id = 21
+PUT {{host}}/products/{{product_id}}?quantity=1
+
+
+###
+
+#6) Adds a new product 
+POST {{host}}/add_product
+Content-Type: application/json
+
+{
+    "Name": "TV",
+    "Price": 4886,
+    "Qty": 87
+}
+
+
+
