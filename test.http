@@ -10,7 +10,7 @@ POST {{host}}/create_order
 Content-Type: application/json
 
 {
-    "timestamp": "2023-07-09T02:24:31.202169",
+    "timestamp": "2023-07-09T03:24:31.202169",
     "items": [
         {
             "product_id": 1,
@@ -21,33 +21,33 @@ Content-Type: application/json
             "bought_quantity": 1
         },
         {
-            "product_id": 3,
+            "product_id": 13,
             "bought_quantity": 2
         },
         {
-            "product_id": 4,
+            "product_id": 14,
             "bought_quantity": 7
         }
     ],
-    "total_amount": 321.05,
+    "total_amount": 3210.05,
     "user_address": {
-        "city": "Udaipur",
+        "city": "Kolkata",
         "country": "India",
-        "zip_code": "18072"
+        "zip_code": "98072"
     }
 }
 
 ###
 
 #3) Fetch all orders from the system (Also implement pagination using limit and offset)
-GET {{host}}/orders?limit=1&offset=20
+GET {{host}}/orders?limit=1&offset=22
 
 
 
 ###
 
 #4) Get a specific order using order_id
-@order_id = 16
+@order_id = 22
 GET {{host}}/orders/{{order_id}}
 
 
@@ -55,7 +55,7 @@ GET {{host}}/orders/{{order_id}}
 
 
 #5) Update a product (using product_id) when updating the available quantity for the product
-@product_id = 21
+@product_id = 25
 PUT {{host}}/products/{{product_id}}?quantity=1
 
 
@@ -66,9 +66,9 @@ POST {{host}}/add_product
 Content-Type: application/json
 
 {
-    "Name": "TV",
-    "Price": 4886,
-    "Qty": 87
+    "Name": "Apple Macbook-3",
+    "Price": 1889000,
+    "Qty": 9
 }
 
 

@@ -26,7 +26,7 @@ async def list_products():
     productList = products_serializer(products)
     for i in range (0,len(productList)):
         mp[i+1]=str(productList[i]['id'])
-    return {"status": "ok" , "productList": productList, "map": mp}
+    return {"status": "ok" , "productList": productList}
 
 
 #2) Update a product (using product_id) when updating the available quantity for the product
@@ -46,6 +46,13 @@ async def update_product(product_id: int, quantity: int):
 async def add_product(product: Product):
     _id = products_collection.insert_one(dict(product))
     product = products_serializer(products_collection.find({"_id":_id.inserted_id}))
+
+    all_products = products_collection.find({})
+    all_productsList = products_serializer(all_products)
+
+    for i in range (0,len(all_productsList)):
+        mp[i+1]=str(all_productsList[i]['id'])
+
     return {"status":"ok", "product": product}
 
 
@@ -62,6 +69,13 @@ async def create_order(order: Order):
     order.user_address = dict(order.user_address)
     _id = orders_collection.insert_one(dict(order))
     order = orders_serializer(orders_collection.find({"_id":ObjectId(_id.inserted_id)}))
+
+    all_orders = orders_collection.find({})
+    all_ordersList = orders_serializer(all_orders)
+
+    for i in range (0,len(all_ordersList)):
+        mp2[i+1]=str(all_ordersList[i]['id'])
+
     return {"status":"ok", "order": order}
 
 
@@ -81,7 +95,7 @@ async def list_orders(limit: int = 3, offset: int = 0):
     for i in range (0,len(all_ordersList)):
         mp2[i+1]=str(all_ordersList[i]['id'])
 
-    return {"status":"ok" , "orderList": orderList, "map": mp2}
+    return {"status":"ok" , "orderList": orderList}
 
 
 #6) Get a specific order using order_id
